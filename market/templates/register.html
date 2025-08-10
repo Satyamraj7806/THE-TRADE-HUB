@@ -1,0 +1,41 @@
+<link rel="stylesheet" href="{{ url_for('static', filename='css/register.css') }}">
+
+{% extends 'base.html' %}
+
+{% block title %}
+REGISTER USER
+{% endblock %}
+
+
+{% block content %}
+<div class="Registration_box">
+    <form method="post" class="form-register" , style="color: antiquewhite;">
+        {{form.hidden_tag()}}
+        <img class="mb-4" src="../static/css/images/registrationpagelogo.png" alt="">
+        <h1 class="h3 mb-3 font-weight-normal">
+            Please Create your Account
+        </h1>
+        <br>
+        {{ form.username.label()}}
+        {{ form.username(class = "form-control", placeholder = "USER NAME")}}
+        <br>
+        {{ form.email_address.label()}}
+        {{ form.email_address(class = "form-control", placeholder = "Email Address")}}
+        <br>
+        {{ form.password1.label()}}
+        {{ form.password1(class = "form-control", placeholder = "Enter your password")}}
+        <br>
+        {{ form.password2.label()}}
+        {{ form.password2(class = "form-control", placeholder = "Confirm your password")}}
+        <br>
+        <a href="{{ url_for('login_page') }}" style="color: rgb(118, 165, 232); text-decoration: none;">
+            Already have an account? Login here
+        </a>
+        <br>
+        <br>
+        {{ form.submit(class="btn btn-lg btn-block btn-primary") }}
+
+    </form>
+</div>
+
+{% endblock %}

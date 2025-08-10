@@ -1,0 +1,28 @@
+.Registration_box {
+    width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    background: transparent;
+    font-size: large;
+    
+}
+.mb-4 {
+  width: 150px; /* Or any size you prefer */
+  height: auto; /* Maintains aspect ratio */
+  display: block;
+  margin: 0 auto; /* optional: centers the image */
+}
+.alert {
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  font-weight: bold;
+  text-align: center;
+  justify-content: center;
+  background-color: white;
+  font-weight: bold;
+  color: black;
+}
+
