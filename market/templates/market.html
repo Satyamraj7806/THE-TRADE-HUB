@@ -51,20 +51,22 @@ MARKET PAGE
         <h2>YOUR CART</h2>
         <div class="row">
             {% for owned_item in owned_items %}
+            {% include 'includes/owned_items_modals.html' %}
             <div class="col-md-6">
                 <div style="margin-bottom: 5px" class="card text-center bg-dark">
                     <div class="card-body">
                         <!-- Item name -->
-                        <h5 class="card-title" style="color: antiquewhite;">{{ owned_item.name }}</h5>
+                        <h5 class="card-title" style="color: white;">{{ owned_item.name }}</h5>
 
                         <!-- Sell button -->
                         <button type="button" class="btn btn-outline-danger" style="margin-bottom: 5px"
-                            data-toggle="modal" data-target="#Modal-SellingConfirm-{{ owned_item.id }}">
+                            data-bs-toggle="modal" data-bs-target="#Modal-sellinfo-{{ owned_item.id }}">
                             Sell this Item
                         </button>
 
+
                         <!-- Item price -->
-                        <p class="card-text"><strong>₹{{ owned_item.price }}</strong></p>
+                        <p class=" card-text" style="color: white;"><strong>₹{{ owned_item.price }}</strong></p>
                     </div>
                 </div>
             </div>
